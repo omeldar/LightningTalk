@@ -12,10 +12,8 @@
   },
   "dependencies": {
     "arg": "^5.0.1",
-    "chalk": "^5.0.0",
     "esm": "^3.2.25",
-    "inquirer": "^8.2.0",
-    "ncp": "^2.0.0"
+    "inquirer": "^8.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -3,9 +3,25 @@
   "version": "1.0.0",
   "description": "A CLI that initializes new cli projects. How ironic right?",
   "main": "cli.js",
+  "bin": {
+    "@brentschooley/clim": "bin/clim",
+    "clim": "bin/clim"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "arg": "^5.0.1",
+    "esm": "^3.2.25",
+    "inquirer": "^8.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "cli",
+    "clim"
+  ],
   "author": "Eldar Omerovic",
   "license": "ISC"
 }
