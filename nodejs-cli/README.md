@@ -109,4 +109,6 @@ export async function optionsHandler(options) {
 }
 ```
 
-13. 
+13. Run `dep` with all different possible combinations and test the cli
+
+_Tutorial End_
