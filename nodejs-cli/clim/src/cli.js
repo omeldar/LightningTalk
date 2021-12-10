@@ -24,7 +24,7 @@ function parseArgumentsIntoOptions(rawArgs){
 
 async function promptForMissingOptions(options){
     const defaultTemplate = 'hello-world';
-    const defaultAction = 'info';
+    const defaultAction = 'create';
     const questions = [];
 
     if(options.action !== 'create' || 
@@ -34,7 +34,7 @@ async function promptForMissingOptions(options){
             type: 'list',
             name: 'action',
             message: 'Select a valid action',
-            choices: ['create', 'delete', 'info'],
+            choices: ['create', 'delete'],
             default: defaultAction
         })
     }
@@ -68,7 +68,8 @@ async function promptForMissingOptions(options){
     }
 }
 
-export function cli(args){
+export async function cli(args){
     let options = parseArgumentsIntoOptions(args);
+    options = await promptForMissingOptions(options);
     console.log(options);
 }
