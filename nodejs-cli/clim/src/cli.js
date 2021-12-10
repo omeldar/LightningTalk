@@ -1,5 +1,6 @@
 import arg from 'arg';
 import inquirer from 'inquirer';
+const path = require('path');
 
 function parseArgumentsIntoOptions(rawArgs){
     const args = arg(
@@ -38,8 +39,13 @@ async function promptForMissingOptions(options){
         })
     }
 
-    if(!options.name && path.basename(options.name)){
-        
+    if(!options.name || !path.basename(options.name)){       //check if project name is valid pathname so it does not cause problems when creating it
+        questions.push({
+            type: 'input',
+            name: 'name',
+            message: 'Enter a project name that is a valid path name.',
+            default: 'myproject'
+        })
     }
 
     if(!options.template){
