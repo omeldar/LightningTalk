@@ -34,7 +34,7 @@ async function promptForMissingOptions(options){
             type: 'list',
             name: 'action',
             message: 'Select a valid action',
-            choices: ['create', 'delete'],
+            choices: ['create'],
             default: defaultAction
         })
     }
